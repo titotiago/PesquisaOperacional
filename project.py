@@ -117,15 +117,18 @@ def main():
      print('Prejuizo = ', Solucao)
    print("\n")
    horas = 0
+   horas_troca = 0
    for j in range(n):
     horas_prod = produtos[j].solution_value()*tabela[m][j]
-    horas+= horas_prod
+    horas_troca += T*booleanos[j].solution_value()
+    horas+= horas_prod 
     print("> Produto ", produtos[j].name(), ' = ', produtos[j].solution_value(),"Unidades produzidas", " - Horas Utilizadas:", horas_prod)
-  
    print("\n")
    for i in range(m):
     print("> Foram comprados",n_lotes[i].solution_value(), "lotes do material", i)
-   print("\nTotal de Horas: ", horas, "/", B )
+  
+   print("\nHoras fazendo trocas:", horas_troca)
+   print("\nTotal de Horas: ", horas+horas_troca, "/", B )
    print()
    print('Problem solved in %f milliseconds' % solver.wall_time())
    print('Problem solved in %d iterations' % solver.iterations())
