@@ -1,2 +1,2 @@
 # PesquisaOperacional
-Plágio é crime. Abraços.
+Trabalho referente a disciplina de Pesquisa Operacional.
